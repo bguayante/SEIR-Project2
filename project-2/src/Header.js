@@ -1,9 +1,13 @@
 import React from 'react';
+import { Route, Link, Redirect } from 'react-router-dom';
 
 function Header() {
 	return (
 		<header>
-            <h1 className='banner'>The Home of the Best Advice on the Internet!</h1>
+            <nav>
+				<Link to='/'>Random</Link>
+				<Link to='./Search.js'>Search</Link>
+			</nav>
         </header>
 	);
 }

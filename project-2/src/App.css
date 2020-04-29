@@ -1,19 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Permanent+Marker&display=swap');
+
 html { 
   background: url('./background.jpg') no-repeat center center fixed; 
   background-size: cover;
 }
 
-body {
-    height: 90vh; 
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.body {
+    height: 80vh; 
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid black;
+    /* border: 2px solid black; */
+    max-width: 800px;
+    margin: auto;
 
 }
 
 header {
-    background-color: rgba(51, 134, 93, 0.527);
     color: white;
-    padding: 5px;
+    padding: 10px;
+    height: 10vh;
+    background-color: rgba(52, 151, 32, 0.315);
+}
+
+p {
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+  font-family: 'Kaushan Script', cursive;
+  cursor: pointer;
+}
+
+p:hover {
+  color: black
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-family: 'Kaushan Script', cursive;
+  border: white solid 2px;
+  padding: 10px 15px 10px 15px;
+
+}
+
+a:hover{
+  color: black;
+  border: black solid 2px;
+}
+
+div{
+  /* border: 1px solid black; */
 }

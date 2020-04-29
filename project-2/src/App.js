@@ -3,12 +3,13 @@ import Advice from './Advice';
 import Header from './Header';
 import './App.css';
 import Search from './Search';
+import { Route, Link, Redirect } from 'react-router-dom';
 
 class App extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			advice: 'Click to get advice!',
+			advice: '',
 			queryTerm: '',
 		};
 	}
@@ -21,7 +22,7 @@ class App extends Component {
 				this.setState({ advice: data.slip.advice });
 			})
 			.catch(console.error);
-			console.log(this.state.advice)
+		console.log(this.state.advice);
 	};
 
 	showSearchedAdvice = () => {
@@ -29,11 +30,10 @@ class App extends Component {
 		fetch(url)
 			.then((response) => response.json())
 			.then((data) => {
-				this.setState({ advice: data.slip.advice });
+				this.setState({ advice: data.slips[0].advice });
 			})
 			.catch(console.error);
 		console.log(this.data);
-
 	};
 
 	searchFormChange = (event) => {
@@ -42,36 +42,41 @@ class App extends Component {
 	};
 
 	searchFormSubmit = (event) => {
-    event.preventDefault();
-    const search = event.target.value
-	this.setState({ queryTerm: search });
-	this.showSearchedAdvice()
-	console.log(this.state.queryTerm);
+		event.preventDefault();
+		const search = event.target.value;
+		this.setState({ queryTerm: search });
+		this.showSearchedAdvice();
+		console.log(this.state.queryTerm);
 	};
+
+	componentWillMount() {
+		this.updateAdvice();
+	}
 
 	render() {
 		return (
 			<>
 				<Header />
-				<body>
-          <div className='advice'>
-					  <Advice advice={this.state.advice} updateAdvice={this.updateAdvice} />
-          </div>
-          <div className='search'>
+				<div className='body'>
+					<div className='advice'>
+						<Advice
+							advice={this.state.advice}
+							updateAdvice={this.updateAdvice}
+						/>
+					</div>
+				<Route path='/' component={App}/>
+					<div className='search'>
 				  	<Search
 				  		searchFormSubmit={this.searchFormSubmit}
 				  		searchString={this.state.queryTerm}
 			  			searchFormChange={this.searchFormChange}
 			  			showSearchedAdvice={this.showSearchedAdvice}
 			    		/>
-          </div>
-          <div>
-            <p>{this.state.queryTerm}</p>
-          </div>
-				</body>
+         			 </div>
+				</div>
 			</>
 		);
 	}
-}
 
+}
 export default App;
