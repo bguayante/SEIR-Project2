@@ -3,26 +3,32 @@ import React from 'react';
 function Search (props) {
 	return (
 		<>
-			<button value='/search/love' onClick={props.valueHandler}>
-				LOVE
+			<button className='btn' value='/search/love' onClick={props.valueHandler}>
+				Love
 			</button>
-			<button value='/search/friend' onClick={props.valueHandler}>
-				FRIENDS
+			<button
+				className='btn'
+				value='/search/friend'
+				onClick={props.valueHandler}>
+				Friends
 			</button>
-			<button value='/search/fail' onClick={props.valueHandler}>
-				SUCCESS
+			<button className='btn' value='/search/fail' onClick={props.valueHandler}>
+				Success
 			</button>
-			<button value='null' onClick={props.updateAdvice}>
-				RANDOM
+			<button className='btn' value='null' onClick={props.updateAdvice}>
+				Random
 			</button>
-			<button value='/search/people' onClick={props.valueHandler}>
-				PEOPLE
+			<button
+				className='btn'
+				value='/search/people'
+				onClick={props.valueHandler}>
+				People
 			</button>
-			<button value='/search/self' onClick={props.valueHandler}>
-				SELF
+			<button className='btn' value='/search/self' onClick={props.valueHandler}>
+				Self
 			</button>
-			<button value='/search/happ' onClick={props.valueHandler}>
-				HAPPINESS
+			<button className='btn' value='/search/happ' onClick={props.valueHandler}>
+				Happiness
 			</button>
 		</>
 	);
