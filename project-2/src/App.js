@@ -3,14 +3,15 @@ import Advice from './Advice';
 import Header from './Header';
 import './App.css';
 import Search from './Search';
-import { Route, Link, Redirect } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 
 class App extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			advice: '',
-			queryTerm: '',
+			searchedAdvice: [],
+			queryTerm: 'love',
 		};
 	}
 
@@ -21,19 +22,23 @@ class App extends Component {
 			.then((data) => {
 				this.setState({ advice: data.slip.advice });
 			})
+			.then(console.log(this.state.advice))
 			.catch(console.error);
-		console.log(this.state.advice);
 	};
+	// RANDOM ADVICE FROM CATEGORY SOLUTION
+	// this.state.array.slips[
+	// Math.floor(Math.random() * this.state.array.slips.length)
+	// ].advice
 
 	showSearchedAdvice = () => {
 		const url = `https://api.adviceslip.com/advice/search/${this.state.queryTerm}`;
 		fetch(url)
 			.then((response) => response.json())
 			.then((data) => {
-				this.setState({ advice: data.slips[0].advice });
+				this.setState({ searchedAdvice: data });
 			})
 			.catch(console.error);
-		console.log(this.data);
+		console.log(this.state.searchedAdvice);
 	};
 
 	searchFormChange = (event) => {
@@ -64,19 +69,19 @@ class App extends Component {
 							updateAdvice={this.updateAdvice}
 						/>
 					</div>
-				<Route path='/' component={App}/>
+					{/* <Route path='/' component={App}/> */}
 					<div className='search'>
-				  	<Search
+						<button onClick={this.showSearchedAdvice}>BUTTON</button>
+						{/* <Search
 				  		searchFormSubmit={this.searchFormSubmit}
 				  		searchString={this.state.queryTerm}
 			  			searchFormChange={this.searchFormChange}
 			  			showSearchedAdvice={this.showSearchedAdvice}
-			    		/>
-         			 </div>
+			    		/> */}
+					</div>
 				</div>
 			</>
 		);
 	}
-
 }
 export default App;
