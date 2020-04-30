@@ -36,11 +36,6 @@ p {
   font-size: 2rem;
   text-align: center;
   font-family: 'Kaushan Script', cursive;
-  cursor: pointer;
-}
-
-p:hover {
-  color: black
 }
 
 a {
@@ -60,4 +55,8 @@ a:hover{
 
 div{
   /* border: 1px solid black; */
+}
+
+.search {
+  text-align: center;
 }
