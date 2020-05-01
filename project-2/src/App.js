@@ -1,27 +1,27 @@
 import React, { Component } from 'react';
-import Advice from './Advice';
-import Header from './Header';
+import Advice from './components/Advice';
 import './App.css';
-import Search from './Search';
+import Search from './components/Search';
+import Footer from './components/Footer';
+import Header from './components/Header';
+
+////////////////////////////////
+//Declare and initialize state//
+////////////////////////////////
 
 class App extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			array: [],
-			advice: '',
+			advice: 'Choose a Category Below',
 			query: '',
 		};
 	}
 
-	//click button
-	//retrieve searched advice
-	//display random advice from searched advice
-
-	// RANDOM ADVICE FROM CATEGORY SOLUTION
-	// this.state.array.slips[
-	// Math.floor(Math.random() * this.state.array.slips.length)
-	// ].advice
+	///////////////////////////////////
+	//Return advice on category click//
+	///////////////////////////////////
 
 	valueHandler = (event) => {
 		this.setState({ query: event.target.value }, this.showSearchedAdvice);
@@ -42,6 +42,10 @@ class App extends Component {
 			});
 	};
 
+	////////////////////////////////////
+	//When random category is selected//
+	////////////////////////////////////
+
 	updateAdvice = () => {
 		const url = 'https://api.adviceslip.com/advice';
 		fetch(url)
@@ -52,22 +56,19 @@ class App extends Component {
 			.catch(console.error);
 	};
 
-	componentDidMount() {
-		this.updateAdvice();
-	}
+	///////////////
+	//Page render//
+	///////////////
 
 	render() {
 		return (
-			<>
-				<Header />
-				<div className='body'>
-					<div className='advice'>
-						<Advice
-							advice={this.state.advice}
-							updateAdvice={this.updateAdvice}
-						/>
-					</div>
-					{/* <Route path='/' component={App}/> */}
+			<div className='body'>
+				<div className='header'>
+					<Header />
+				</div>
+				<div className='spacer'></div>
+				<div className='advice'>
+					<Advice advice={this.state.advice} updateAdvice={this.updateAdvice} />
 				</div>
 				<div className='search'>
 					<Search
@@ -75,8 +76,12 @@ class App extends Component {
 						updateAdvice={this.updateAdvice}
 					/>
 				</div>
-			</>
+				<div>
+					<Footer />
+				</div>
+			</div>
 		);
 	}
 }
+
 export default App;

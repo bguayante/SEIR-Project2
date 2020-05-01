@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Search (props) {
+function Search(props) {
 	return (
 		<>
 			<button className='btn' value='/search/love' onClick={props.valueHandler}>
@@ -15,7 +15,7 @@ function Search (props) {
 			<button className='btn' value='/search/fail' onClick={props.valueHandler}>
 				Success
 			</button>
-			<button className='btn' value='null' onClick={props.updateAdvice}>
+			<button className='btn' value='' onClick={props.updateAdvice}>
 				Random
 			</button>
 			<button
@@ -32,8 +32,6 @@ function Search (props) {
 			</button>
 		</>
 	);
-};
-
-
+}
 
 export default Search;

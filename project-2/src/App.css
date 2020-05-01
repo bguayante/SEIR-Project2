@@ -1,81 +1,91 @@
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Permanent+Marker&display=swap');
 
-html { 
-  background: url('./background.jpg') no-repeat center center fixed; 
-  background-size: cover;
-}
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap');
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
+html {
+	background: url('./imgs/background.jpg') no-repeat center center fixed;
+	background-size: cover;
 }
 
 .body {
-    height: 80vh; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* border: 2px solid black; */
-    max-width: 800px;
-    margin: auto;
-
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 90%;
+	height: 100%;
+	margin: 0 auto;
 }
 
-header {
-    color: white;
-    padding: 10px;
-    height: 10vh;
-    background-color: rgba(52, 151, 32, 0.315);
-}
-
-p {
-  color: white;
-  font-weight: bold;
-  font-size: 2rem;
-  text-align: center;
-  font-family: 'Kaushan Script', cursive;
-}
-
-a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  font-family: 'Kaushan Script', cursive;
-  border: white solid 2px;
-  padding: 10px 15px 10px 15px;
-
-}
-
-a:hover{
-  color: black;
-  border: black solid 2px;
-}
-
-div{
-  /* border: 1px solid black; */
+.advice p {
+	color: white;
+	font-weight: bold;
+	font-size: 2rem;
+	text-align: center;
+	font-family: 'Kaushan Script', cursive;
 }
 
 .search {
   text-align: center;
+  padding-bottom: 5px
 }
 
-.btn{
+.btn {
+	color: white;
+	font-weight: bold;
+	font-family: 'Kaushan Script', cursive;
+	border: white solid 2px;
+	padding: 10px 15px 10px 15px;
+	background-color: rgba(255, 255, 255, 0);
+	margin: 5px;
+	width: 125px;
+	font-size: 1.25rem;
+}
+
+.btn:hover {
+	color: black;
+	border: black solid 2px;
+	cursor: pointer;
+}
+
+.advice {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+  height: 60vh;
+}
+
+.header {
+	height: 100px;
+  /* background-color: rgba(0, 128, 0, 0.253); */
+  font-family: 'Merienda', cursive;
+  font-weight: bold;
+  color: white;
+}
+
+.footer {
+	height: 90px;
+}
+
+.adviceSlip {
+  text-align: right;
   color: white;
   font-weight: bold;
-  font-family: 'Kaushan Script', cursive;
-  border: white solid 2px;
-  padding: 10px 15px 10px 15px;
-  background-color: rgba(255, 255, 255, 0);
-  margin: 5px;
-  width: 125px;
-  font-size: 1rem;
+  font-family: 'Merienda', cursive;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  position: fixed;
+  bottom: 0px;
+  right: 15px;
+  font-size: 14px;
 }
 
-.btn:hover{
-  color: black;
-  border: black solid 2px;
-  cursor: pointer;
+.spacer {
+	height: 75px;
 }
 
+h1 {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  height: 25px
+}
