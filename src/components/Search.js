@@ -15,9 +15,6 @@ function Search(props) {
 			<button className='btn' value='/search/fail' onClick={props.valueHandler}>
 				Success
 			</button>
-			<button className='btn' value='' onClick={props.updateAdvice}>
-				Random
-			</button>
 			<button
 				className='btn'
 				value='/search/people'
@@ -29,6 +26,9 @@ function Search(props) {
 			</button>
 			<button className='btn' value='/search/happ' onClick={props.valueHandler}>
 				Happiness
+			</button>
+			<button className='btn' value='' onClick={props.updateAdvice}>
+				Random
 			</button>
 		</>
 	);
