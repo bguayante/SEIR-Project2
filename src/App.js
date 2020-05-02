@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import Advice from './components/Advice';
-//import Time from 'react-time';
 import './App.css';
 import Search from './components/Search';
 import Footer from './components/Footer';
 import Header from './components/Header';
-import Time from './components/Time'
 
 ////////////////////////////////
 //Declare and initialize state//
@@ -16,7 +14,7 @@ class App extends Component {
 		super(props);
 		this.state = {
 			array: [],
-			advice: 'Choose a Category Below To Get Advice',
+			advice: 'Choose a Category Below',
 			query: '',
 		};
 	}
@@ -61,23 +59,16 @@ class App extends Component {
 	///////////////
 	//Page render//
 	///////////////
-	
+
 	render() {
-
-		
-		
-
 		return (
 			<div className='body'>
 				<div className='header'>
 					<Header />
 				</div>
 				<div className='spacer'></div>
-				<div className='time'>
-					<Time />
-				</div>
 				<div className='advice'>
-					<Advice advice={this.state.advice} />
+					<Advice advice={this.state.advice} updateAdvice={this.updateAdvice} />
 				</div>
 				<div className='search'>
 					<Search

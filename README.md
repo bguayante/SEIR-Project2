@@ -1,4 +1,3 @@
-# SEIR-Project2
 # LIFEADVISOR
 
 ### DESCRIPTION
