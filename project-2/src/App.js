@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import Advice from './components/Advice';
-//import Time from 'react-time';
 import './App.css';
+import Advice from './components/Advice';
 import Search from './components/Search';
 import Footer from './components/Footer';
 import Header from './components/Header';
-import Time from './components/Time'
+import Time from './components/Time';
 
 ////////////////////////////////
 //Declare and initialize state//
@@ -61,12 +60,8 @@ class App extends Component {
 	///////////////
 	//Page render//
 	///////////////
-	
+
 	render() {
-
-		
-		
-
 		return (
 			<div className='body'>
 				<div className='header'>
@@ -85,7 +80,7 @@ class App extends Component {
 						updateAdvice={this.updateAdvice}
 					/>
 				</div>
-				<div>
+				<div className='footer'>
 					<Footer />
 				</div>
 			</div>

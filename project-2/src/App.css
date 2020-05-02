@@ -2,11 +2,24 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap');
 
+/* Background Image */
+
 html {
 	background: url('./imgs/background.jpg') no-repeat center center fixed;
 	background-size: cover;
 }
 
+/* Header */
+
+.header {
+	height: 50px;
+	font-family: 'Merienda', cursive;
+	font-weight: bold;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 0px;
+}
 
 h1 {
 	margin-bottom: 0px;
@@ -14,82 +27,8 @@ h1 {
 	height: 25px;
 }
 
-.time {
-	font-family: 'Merienda', cursive;
-	font-weight: bold;
-	color: white;
-	text-align: right;
-	font-size: 2rem;
-	margin-top: 0px;
-	margin-right: 5px;
-}
-
-.body {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	width: 850px;
-	height: 100%;
-	margin: 0 auto;
-}
-
-.advice {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	height: 39vh;
-	margin-bottom: 100px;
-	margin-top: 100px;
-}
-
-.advice p {
-	color: white;
-	font-weight: bold;
-	font-size: 2rem;
-	text-align: center;
-	font-family: 'Kaushan Script', cursive;
-	
-}
-
-.search {
-	text-align: center;
-	padding-bottom: 5px;
-}
-
-.btn {
-	color: white;
-	font-weight: bold;
-	font-family: 'Kaushan Script', cursive;
-	border: white solid 2px;
-	padding: 10px 15px 10px 15px;
-	background-color: rgba(255, 255, 255, 0);
-	margin: 5px;
-	width: 125px;
-	font-size: 1.25rem;
-}
-
-.btn:hover {
-	color: black;
-	border: black solid 2px;
-	cursor: pointer;
-}
-
-.footer {
-	height: 65px;
-}
-
-.adviceSlip {
-	text-align: right;
-	color: white;
-	font-weight: bold;
-	font-family: 'Merienda', cursive;
-	padding-right: 15px;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	position: fixed;
-	bottom: 0px;
-	right: 15px;
-	font-size: 14px;
+.banner {
+	width: 40%;
 }
 
 .links {
@@ -118,17 +57,90 @@ a:hover{
 	cursor: pointer;
 }
 
-.banner {
-	width: 40%;
-}
+/* Clock */
 
-.header {
-	height: 50px;
+.time {
 	font-family: 'Merienda', cursive;
 	font-weight: bold;
 	color: white;
+	text-align: right;
+	font-size: 2rem;
+	margin-top: 0px;
+	margin-right: 5px;
+}
 
+/* Body Container */
+
+.body {
 	display: flex;
-	justify-content: space-between;
-	margin-bottom: 0px;
+	flex-direction: column;
+	justify-content: center;
+	width: 850px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+/* Advice Text */
+
+.advice {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 39vh;
+	margin-bottom: 100px;
+	margin-top: 100px;
+}
+
+.advice p {
+	color: white;
+	font-weight: bold;
+	font-size: 2rem;
+	text-align: center;
+	font-family: 'Kaushan Script', cursive;
+	
+}
+
+/* Buttons */
+
+.search {
+	text-align: center;
+	padding-bottom: 5px;
+}
+
+.btn {
+	color: white;
+	font-weight: bold;
+	font-family: 'Kaushan Script', cursive;
+	border: white solid 2px;
+	padding: 10px 15px 10px 15px;
+	background-color: rgba(255, 255, 255, 0);
+	margin: 5px;
+	width: 125px;
+	font-size: 1.25rem;
+}
+
+.btn:hover {
+	color: black;
+	border: black solid 2px;
+	cursor: pointer;
+}
+
+/* Footer */
+
+.footer {
+	height: 65px;
+}
+
+.adviceSlip {
+	text-align: right;
+	color: white;
+	font-weight: bold;
+	font-family: 'Merienda', cursive;
+	padding-right: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	position: fixed;
+	bottom: 0px;
+	right: 15px;
+	font-size: 14px;
 }

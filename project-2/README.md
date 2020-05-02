@@ -10,7 +10,6 @@ A webapp designed to deliver advice from the AdviceSlip API the user. Users may 
 
 A screenshot of the app. Users may click on the categories at the bottom of the screen to change the advice that is displayed.
 
-
 ![app-screenshot](src/imgs/screenshot.png)
 
 ---
@@ -21,13 +20,15 @@ A screenshot of the app. Users may click on the categories at the bottom of the 
 
 -Users may click on a button and receive random advice from all categories.
 
----
+-Users may view the time.
+
+## -Users may click the "Email" and "Calendar" links to visit Gmail and Google Calendar.
 
 ### PLANNED FEATURES
 
 1. The ability to save advice
 2. The ability to remove advice 'slips' from category arrays so that duplicate slips are not shown.
-2. A clock so that the page may be used as a dashboard. A future iteration of this app will include calendar and email integrations for notifications.
+3. Full integration with Gmail and Calendar APIs to show unread message notifications.
 
 ---
 

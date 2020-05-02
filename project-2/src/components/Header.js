@@ -8,8 +8,12 @@ function Header() {
 				<p>Let us advise your life</p>
 			</div>
 			<div className='links'>
-				<a href='https://www.gmail.com' target='blank'>Email</a>
-				<a href='https://calendar.google.com' target='blank'>Calendar</a>
+				<a href='https://www.gmail.com' target='blank'>
+					Email
+				</a>
+				<a href='https://calendar.google.com' target='blank'>
+					Calendar
+				</a>
 			</div>
 		</>
 	);
