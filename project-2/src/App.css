@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Permanent+Marker&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap');
+
+html {
+	background: url('./imgs/background.jpg') no-repeat center center fixed;
+	background-size: cover;
+}
+
+.body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 90%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.advice p {
+	color: white;
+	font-weight: bold;
+	font-size: 2rem;
+	text-align: center;
+	font-family: 'Kaushan Script', cursive;
+}
+
+.search {
+  text-align: center;
+  padding-bottom: 5px
+}
+
+.btn {
+	color: white;
+	font-weight: bold;
+	font-family: 'Kaushan Script', cursive;
+	border: white solid 2px;
+	padding: 10px 15px 10px 15px;
+	background-color: rgba(255, 255, 255, 0);
+	margin: 5px;
+	width: 125px;
+	font-size: 1.25rem;
+}
+
+.btn:hover {
+	color: black;
+	border: black solid 2px;
+	cursor: pointer;
+}
+
+.advice {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+  height: 60vh;
+}
+
+.header {
+	height: 100px;
+  /* background-color: rgba(0, 128, 0, 0.253); */
+  font-family: 'Merienda', cursive;
+  font-weight: bold;
+  color: white;
+}
+
+.footer {
+	height: 90px;
+}
+
+.adviceSlip {
+  text-align: right;
+  color: white;
+  font-weight: bold;
+  font-family: 'Merienda', cursive;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  position: fixed;
+  bottom: 0px;
+  right: 15px;
+  font-size: 14px;
+}
+
+.spacer {
+	height: 75px;
+}
+
+h1 {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  height: 25px
+}
