@@ -4,6 +4,7 @@ import './App.css';
 import Search from './components/Search';
 import Footer from './components/Footer';
 import Header from './components/Header';
+import Time from 'react-time'
 
 ////////////////////////////////
 //Declare and initialize state//
@@ -61,12 +62,17 @@ class App extends Component {
 	///////////////
 
 	render() {
+		const now= <Time value={now} titleFormat='HH:mm' relative />
+		console.log(now)git 
+
 		return (
 			<div className='body'>
 				<div className='header'>
 					<Header />
 				</div>
-				<div className='spacer'></div>
+				<div className='time'>
+					<div>Date()</div>
+				</div>
 				<div className='advice'>
 					<Advice advice={this.state.advice} updateAdvice={this.updateAdvice} />
 				</div>
@@ -79,7 +85,7 @@ class App extends Component {
 				<div>
 					<Footer />
 				</div>
-			</div>
+			</Time>
 		);
 	}
 }
